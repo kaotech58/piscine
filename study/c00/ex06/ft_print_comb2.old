@@ -1,0 +1,52 @@
+#include <unistd.h>
+
+void	ft_display(int first, int second, int third, int fourth)
+{
+	write(1, &first, 1);
+	write(1, &second, 1);
+	write(1, " ", 1);
+	write(1, &third, 1);
+	write(1, & fourth, 1);
+	if (first != 56 && second != 57 && third != 56 && fourth != 57)
+	{
+		write(1, ", ", 2);
+	}
+}
+
+void	ft_print_comb2(void)
+{
+	int	first;
+	int	second;
+	int	third;
+	int	fourth;
+
+	first = 47;
+	second = 47;
+	third = 47;
+	fourth = 47;
+	while (++fourth <= 57)
+	{
+		while (++third <= 57)
+		{
+			while (++second <= 57)
+			{
+				while (++first <= 57)
+				{
+					ft_display(fourth, third, second, first);
+				}
+				first = 47;
+			}
+			second = 47;
+			if (third == 56)
+			{
+				break ;
+			}
+		}
+		third = 47;
+	}
+}
+
+int	main(void)
+{
+	ft_print_comb2();
+}
