@@ -5,22 +5,19 @@ char	*ft_strcpy(char *dest, char *src)
 	int	i;
 
 	i = 0;
-	while (dest[i])
+	while (src[i] != '\0')
 	{
 		dest[i] = src[i];
 		i++;
 	}
-	dest[i] = src[i];
 	return (dest);
 }
 
 int	main(void)
 {
-	char	source[];
-	char	destination[];
+	char	source[] = "Eiffe";
+	char	destination[] = "Effie";
 
-	source = "Eiffe";
-	destination = "Effie";
 	printf("original source is: %s\n", source);
 	printf("original destination is: %s\n", destination);
 	ft_strcpy(destination, source);
