@@ -6,21 +6,15 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	unsigned int	i;
 
 	i = 0;
-	while (src[i]  && i < n)
+	while (src[i] != '\0' && i < n)
 	{
 		dest[i] = src[i];
 		i++;
 	}
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
 	return (dest);
-}
-
-int	main(void)
-{
-	char firstName[] = "Timothy";
-	char secondName[] = "Eiffe";
-
-	printf("%s\n%s\n", firstName, secondName);
-	ft_strncpy(firstName, secondName, 5);
-	printf("%s\n%s", firstName, secondName);
-	return (0);
 }
