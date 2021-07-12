@@ -4,15 +4,19 @@ void	ft_putchar(char c);
 
 void	ft_putnbr(int nb)
 {
+	unsigned int	nbr;
+
 	if (nb < 0)
 	{
-		nb = -nb;
 		ft_putchar('-');
+		nbr = nb * -1;
 	}
-	if (nb >= 10)
+	else
+		nbr = nb;
+	if (nbr >= 10)
 	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
+		ft_putnbr(nbr / 10);
+		ft_putnbr(nbr % 10);
 	}
 	else
 	{
@@ -23,4 +27,9 @@ void	ft_putnbr(int nb)
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
+}
+
+int	main(void)
+{
+	ft_putnbr(-2147483648);
 }
