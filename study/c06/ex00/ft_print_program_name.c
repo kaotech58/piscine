@@ -4,13 +4,10 @@ void	ft_putchar(char c);
 
 void	ft_print_program_name(char *str)
 {
-	char	*name;
-
-	name = str;
-	while (*name != '\0')
+	while (*str != '\0')
 	{
-		ft_putchar(*name);
-		name++;
+		ft_putchar(*str);
+		str++;
 	}
 	ft_putchar('\n');
 }

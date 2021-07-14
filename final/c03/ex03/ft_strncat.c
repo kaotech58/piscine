@@ -2,7 +2,7 @@
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	i;
+	int				i;
 	unsigned int	j;
 
 	i = 0;
